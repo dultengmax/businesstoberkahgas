@@ -1,0 +1,304 @@
+# Product Requirements Document (PRD)
+## Website Jasa Pembuatan Web — Business To Berkah
+
+**Versi:** 1.0
+**Tanggal:** 9 Agustus 2026
+**Pemilik Produk:** Abdul (Direktur, PT Sandang Jaya Berdikari)
+**Status:** Draft untuk pengembangan
+
+---
+
+## 1. Latar Belakang & Tujuan
+
+Business To Berkah adalah entitas yang **berdiri sendiri** dan sekaligus **membawahi komunitas Pujasera Digital**. Bisnis ini memiliki dua lini layanan:
+1. **Jasa pembuatan website** (project-based, one-time payment) — landing page, company profile, sistem custom
+2. **Layanan POS (Point of Sale) berlangganan untuk UMKM** (subscription-based, recurring revenue) — aplikasi kasir/manajemen toko yang disewakan bulanan/tahunan
+
+Website ini membutuhkan landing page profil sebagai etalase kredibilitas untuk KEDUA lini bisnis tersebut. Website akan menjadi *sales tool* utama untuk mengonversi calon klien (UMKM, personal brand, bisnis kecil-menengah) menjadi klien yang membayar — baik untuk project website satu kali, maupun langganan POS bulanan — dengan menonjolkan portofolio nyata dan struktur harga yang transparan untuk masing-masing lini.
+
+### Tujuan Bisnis
+- Meningkatkan kepercayaan calon klien melalui bukti nyata (portofolio, testimoni)
+- Mempercepat proses closing dengan pricing yang jelas di depan, untuk jasa web maupun paket langganan POS
+- Membangun positioning sebagai penyedia solusi digital UMKM yang lengkap (bukan sekadar tukang buat web)
+- Mendorong konversi ke model recurring revenue (langganan POS) di samping project one-time (jasa web)
+- Menjadi channel inbound leads (kontak, WhatsApp, form) untuk kedua lini layanan
+
+### Tujuan Produk
+Website satu halaman (atau multi-section) yang menjawab 4 pertanyaan utama calon klien dalam <30 detik: *Siapa kalian? Kenapa harus pilih kalian? Berapa biayanya? Apa buktinya kalian bisa?*
+
+---
+
+## 2. Target Pengguna
+
+| Segmen | Kebutuhan Utama | Lini Layanan Relevan |
+|---|---|---|
+| Pemilik UMKM/toko fisik (warung, resto, retail kecil) | Kasir digital, catat stok & transaksi otomatis, laporan penjualan | POS Berlangganan |
+| Pemilik UMKM/toko online | Website simpel, cepat online, harga jelas | Jasa Web |
+| Personal brand/freelancer | Landing page/portofolio pribadi, desain menarik | Jasa Web |
+| Startup/bisnis kecil | Web company profile, sistem custom (booking, katalog, dsb) | Jasa Web |
+| Panitia event/organisasi | Website event/microsite cepat jadi | Jasa Web |
+| UMKM yang sudah punya toko/usaha jalan | Ingin lebih rapi kelola kasir + sekaligus punya website | POS + Jasa Web (bundling) |
+
+---
+
+## 3. Ruang Lingkup (Scope)
+
+### In-Scope (v1)
+1. Landing page utama (single page, scrollable, dengan anchor navigation), memuat DUA lini layanan (Jasa Web & POS Berlangganan) secara jelas terpisah
+2. Section: Hero, Deskripsi/Tentang Kami, Kelebihan/Value Proposition, Layanan (Jasa Web + POS), Pricing (dua tabel/tab terpisah), Portofolio (Jasa Web) + Showcase Fitur (POS), Testimoni (opsional), Kontak/CTA, Footer
+3. Form kontak / integrasi WhatsApp langsung — dengan pemilihan minat ("Saya tertarik: Jasa Web / Langganan POS / Keduanya")
+4. Responsive (mobile-first, karena mayoritas traffic UMKM dari HP)
+5. SEO dasar (meta tag, OG image, sitemap)
+
+### Out-of-Scope (v1)
+- Dashboard admin/CMS custom untuk landing page (gunakan konten statis dulu, CMS bisa fase 2)
+- **Aplikasi POS itu sendiri** — v1 hanya landing page pemasaran/showcase, BUKAN pembangunan produk POS-nya (diasumsikan sudah ada atau dikembangkan terpisah; jika belum ada, perlu PRD produk POS sendiri)
+- Sistem pendaftaran/onboarding langganan otomatis (trial signup, billing) — closing tetap manual via WA di v1
+- Multi-bahasa (Bahasa Indonesia saja dulu)
+- Blog/artikel (fase 2 untuk SEO content marketing)
+- Payment gateway/checkout online (klien tetap closing manual via WA)
+
+> **Status produk POS: sedang dibangun.** Karena aplikasi POS belum live, strategi konten untuk section POS di v1 menggunakan pendekatan **"pre-launch/coming soon dengan validasi minat"**:
+> - Tampilkan fitur POS dalam bentuk mockup/UI konsep (bisa dibuat di Figma dulu jika belum ada tampilan asli), bukan screenshot aplikasi nyata
+> - Gunakan label yang jujur seperti "Segera Hadir" atau "Early Access" pada section POS, agar tidak menyesatkan calon pelanggan
+> - CTA untuk POS diarahkan ke **"Daftar Waitlist"** atau **"Jadi Early Adopter"** (bukan "Berlangganan Sekarang"), sehingga bisa mengumpulkan leads sambil produk masih dikembangkan
+> - Pricing POS ditampilkan sebagai **estimasi/rencana harga** dengan disclaimer kecil ("harga dapat berubah saat peluncuran resmi")
+> - Setelah POS live dan punya pengguna pilot, section ini di-upgrade ke testimoni & pricing final (masuk v1.1)
+
+---
+
+## 4. Struktur Halaman & Requirement Konten
+
+### 4.1 Hero Section
+- **Tujuan:** Menarik perhatian dalam 3 detik pertama
+- **Konten:** Nama brand "Business To Berkah", tagline singkat (contoh: "Wujudkan Website Bisnis Impian Anda, Cepat & Profesional"), CTA utama ("Konsultasi Gratis" / "Lihat Portofolio")
+- **Elemen visual:** Ilustrasi/mockup website, atau animasi ringan
+
+### 4.2 Deskripsi / Tentang Kami
+- **Tujuan:** Menjawab "siapa kalian, apa yang kalian kerjakan"
+- **Konten:** Penjelasan singkat jasa (jenis website yang dikerjakan: company profile, landing page, toko online, dsb), value inti (cepat, terjangkau, berkualitas), jumlah proyek selesai (angka kredibilitas jika ada)
+
+### 4.3 Kelebihan Kami (Value Proposition)
+- **Tujuan:** Diferensiasi dari kompetitor
+- **Format:** Grid 3-6 kartu ikon + judul singkat + deskripsi 1 kalimat
+- **Contoh poin (isi sesuai fakta Abdul):**
+  - Proses cepat (estimasi X hari kerja)
+  - Desain custom, bukan template mentah
+  - Harga transparan, tanpa biaya tersembunyi
+  - Revisi termasuk dalam paket
+  - Support pasca-launching
+  - Teknologi modern (performa cepat, SEO-friendly)
+
+### 4.4 Layanan (dua lini, tampilkan sebagai tab atau dua sub-section berbeda)
+
+**A. Jasa Pembuatan Website**
+- Jenis-jenis layanan: Landing Page, Company Profile, Toko Online, Web Custom/Sistem, dll
+- Model bisnis: one-time project fee
+
+**B. Layanan POS Berlangganan untuk UMKM** *(status: sedang dikembangkan — tampilkan sebagai "Segera Hadir")*
+- Fitur utama yang perlu ditonjolkan (isi sesuai rencana fitur produk POS yang sedang dibangun), contoh umum:
+  - Kasir digital (input transaksi, cetak/kirim struk)
+  - Manajemen stok/inventori otomatis
+  - Laporan penjualan harian/bulanan
+  - Multi-user/multi-cabang (jika ada)
+  - Bisa diakses dari HP/tablet
+- Model bisnis: langganan bulanan/tahunan (recurring)
+- Badge/label "Segera Hadir" atau "Early Access" ditempel jelas di section ini
+
+### 4.5 Pricing (dipisah per lini layanan — gunakan tab/toggle "Jasa Web" vs "Langganan POS")
+
+**A. Pricing Jasa Website**
+- **Format:** 4 tier card, dibedakan berdasarkan jenis kebutuhan dan skala klien
+- **Paket:**
+
+**1. LITE** — Rp 1.000.000 *(fokus UMKM pemula, budget ketat)*
+| Aspek | Detail |
+|---|---|
+| Halaman | 1 halaman (landing page/single page) |
+| Revisi | Maksimal 2x (minor: teks, warna, posisi gambar) |
+| Domain & Hosting | Domain lokal/ekonomis (`.my.id`/`.biz.id`) + Shared Hosting standar (500MB–1GB) |
+| Desain | Template standar (klien pilih dari katalog) |
+| Fitur ekstra | Floating WhatsApp, SSL gratis (HTTPS), mobile-friendly |
+| Waktu pengerjaan | 3–5 hari kerja |
+
+**2. PRO** — Rp 2.500.000 *(fokus UMKM berkembang & usaha menengah — beri label "Best Seller")*
+| Aspek | Detail |
+|---|---|
+| Halaman | Maksimal 5 halaman (Home, About, Services, Gallery, Contact) |
+| Revisi | Maksimal 3x |
+| Domain & Hosting | Domain premium (`.com`/`.id`) + Shared Hosting menengah (2GB–5GB) |
+| Desain | Template premium dengan kustomisasi layout sesuai brand |
+| Fitur ekstra | Integrasi Google Maps, form kontak ke email, 1 email bisnis, SEO dasar (meta title & description) |
+| Waktu pengerjaan | 1–2 minggu |
+
+**3. CORPORATE / ELITE** — Rp 6.000.000 – 7.000.000 *(fokus company profile profesional, PT/CV)*
+| Aspek | Detail |
+|---|---|
+| Halaman | 10–15 halaman (termasuk blog/katalog produk sederhana) |
+| Revisi | Maksimal 5x |
+| Domain & Hosting | Domain premium (`.com`/`.co.id`) + Cloud Hosting/VPS skala kecil |
+| Desain | Custom UI/UX sesuai guideline perusahaan (bukan template) |
+| Fitur ekstra | CMS (klien update artikel/portofolio sendiri), Google Analytics, 5 email bisnis, optimasi page speed |
+| Waktu pengerjaan | 3–4 minggu |
+
+**4. CUSTOM / ENTERPRISE** — mulai Rp 10.000.000, **harga tidak ditampilkan angka pasti** *(fokus kebutuhan khusus: portal dinamis, katalog besar, arsitektur custom)*
+| Aspek | Detail |
+|---|---|
+| Halaman | Unlimited, sesuai kesepakatan |
+| Revisi | Fleksibel sampai sign-off akhir |
+| Domain & Hosting | VPS/Server dedicated, arsitektur khusus untuk traffic tinggi |
+| Desain | Full custom development (desain & coding eksklusif) |
+| Fitur ekstra | Integrasi API pihak ketiga (mis. payment gateway), keamanan tingkat lanjut, maintenance/support prioritas 3–6 bulan pertama |
+| **Label harga di pricing card** | **"Hubungi Kami / Let's Talk"** — bukan angka, karena tergantung kompleksitas sistem |
+
+- **Setiap tier memuat:** nama paket, harga (atau "Hubungi Kami" untuk Custom/Enterprise), daftar fitur, CTA ke WhatsApp/email dengan pre-filled pesan paket
+- **Catatan:** Paket **PRO** diberi badge "Best Seller"
+
+**B. Pricing Langganan POS** *(status: pre-launch — tampilkan sebagai estimasi)*
+- **Format:** Berjenjang 2 tier (final — tidak ada tier ketiga di atas Rp 79rb, sudah disamakan/dikonfirmasi):
+
+  | Tier | Harga | Fitur |
+  |---|---|---|
+  | Standar | Rp 49.000/bulan | Layanan terbatas — **tanpa AI agent** |
+  | Menengah | Rp 79.000/bulan | Fitur lumayan lengkap — **termasuk AI agent** |
+
+  Opsi tahunan Rp 600.000 (setara ±Rp 50.000/bulan) — **masih perlu dikonfirmasi ini berlaku untuk tier yang mana** (Standar, Menengah, atau keduanya).
+
+- **Elemen wajib:** label "Estimasi Harga Peluncuran", toggle bulanan/tahunan, badge pembeda fitur ("Termasuk AI Agent" sebagai pembeda utama Standar vs Menengah), CTA **"Daftar Waitlist / Early Access"** (bukan "Berlangganan Sekarang", karena produk belum live)
+- **Perlu dilengkapi Abdul:**
+  1. Fitur lengkap tier Menengah (Rp 79rb) di luar AI agent
+  2. Opsi harga tahunan Rp 600rb ini berlaku untuk tier mana
+- **Catatan:** Tambahkan insentif waitlist, misal "Early adopter dapat diskon X% saat resmi diluncurkan"
+
+> **Perlu diisi Abdul:** Detail harga & fitur pasti untuk kedua lini — belum ada di draft ini.
+
+### 4.6 Portofolio & Showcase
+
+**A. Portofolio Jasa Website**
+- **Tujuan:** Bukti sosial (social proof) — paling krusial untuk kredibilitas
+- **Format:** Grid/carousel kartu proyek — screenshot/mockup, nama proyek, kategori, link demo (jika ada)
+- **Sumber konten:** Kurasi proyek ditentukan langsung oleh Abdul (custom, bukan otomatis diambil dari seluruh riwayat proyek) — bagian ini di layout dibuat sebagai data terpisah yang mudah diisi/diganti manual
+- **Filter kategori (opsional):** Landing Page / Company Profile / Sistem Custom / E-commerce
+
+**B. Showcase Fitur POS** *(status: pre-launch)*
+- **Tujuan:** Karena POS masih dibangun dan belum punya pengguna nyata, showcase berupa preview visual mockup/konsep UI untuk membangun antisipasi dan mengumpulkan waitlist
+- **Format:** Mockup desain (Figma/prototype) yang di-frame sebagai "Preview Tampilan Aplikasi (dalam pengembangan)", atau ilustrasi konsep alur penggunaan jika UI belum siap ditampilkan
+- **Label wajib:** Cantumkan jelas "Preview — dalam tahap pengembangan" agar tidak menyesatkan calon pengguna
+- **Setelah POS live:** Ganti mockup dengan screenshot aplikasi asli dan tambahkan mini case study/testimoni dari pengguna pilot pertama (masuk v1.1)
+
+### 4.7 Testimoni (opsional v1, disarankan v1.1)
+- Kutipan singkat + nama & jenis usaha klien
+
+### 4.8 Kontak / CTA Akhir
+- Form singkat (Nama, No. WA/Email, Kebutuhan) ATAU tombol langsung ke WhatsApp dengan template pesan
+- **Kontak resmi:**
+  - Email: admin@businesstoberkah.com
+  - WhatsApp: 0895-4118-28671
+- Semua CTA di halaman ("Konsultasi Gratis", "Pilih Paket", "Daftar Waitlist") mengarah ke salah satu dari dua kanal ini — disarankan WhatsApp sebagai CTA utama (respons lebih cepat), email sebagai alternatif sekunder
+- Alternatif kontak: Instagram (perlu dilengkapi handle-nya)
+
+### 4.9 Footer
+- Logo, tagline singkat, link navigasi, sosial media, copyright, kontak
+
+---
+
+## 5. Non-Functional Requirements
+
+| Aspek | Requirement |
+|---|---|
+| Performa | Lighthouse score >90, load <2 detik |
+| Responsive | Mobile-first, breakpoint sm/md/lg/xl |
+| SEO | Meta title/description per section, OG tags, structured data (Organization) |
+| Aksesibilitas | Kontras warna cukup, alt text pada gambar portofolio |
+| Analytics | Google Analytics / Plausible untuk tracking konversi CTA |
+| Domain | businesstoberkah.com |
+| Hosting | Vercel (selaras dengan stack Next.js) |
+
+---
+
+## 6. Tech Stack (Rekomendasi)
+
+Konsisten dengan stack yang biasa dipakai:
+- **Framework:** Next.js (App Router) + TypeScript
+- **Styling:** Tailwind CSS
+- **Animasi:** Framer Motion (untuk micro-interaction di hero, hover portofolio)
+- **Form handling:** React Hook Form + validasi Zod, submit ke email (Resend/Nodemailer) atau langsung redirect WA
+- **Deployment:** Vercel
+- **CMS ringan (opsional fase 2):** Portofolio & pricing disimpan di file JSON/MDX dulu agar mudah update tanpa rebuild backend penuh
+
+---
+
+## 7. Desain & Branding
+
+- **Gaya visual:** Profesional, modern, clean — hindari kesan "template murah"
+- **Sumber identitas:** Logo resmi "Business To Berkah" sudah tersedia — seluruh palet warna website WAJIB mengikuti logo ini, bukan ditentukan bebas
+- **Palet warna (diturunkan dari logo):**
+
+  | Warna | Hex (perkiraan, cek ulang dengan file vektor asli) | Peran |
+  |---|---|---|
+  | Emerald/Teal | `#16E0B3` | Ujung awal gradasi ikon "B" & teks "To Berkah", aksen hijau-kebiruan |
+  | Cyan Blue | `#13A6E8` | Ujung akhir gradasi, warna aksen utama & CTA |
+  | Deep Navy | `#16142E` | Warna teks utama "usiness", warna dominan untuk body copy & elemen gelap |
+  | Putih | `#FFFFFF` | Background utama (logo dirancang untuk latar putih) |
+
+  Gradasi teal → cyan (seperti pada ikon "B" dan teks "To Berkah") dipakai sebagai elemen visual signature — misalnya pada CTA utama, garis pembatas section, atau highlight angka pricing — bukan dipakai rata di seluruh halaman agar tetap terasa premium, bukan norak.
+- **Tipografi:** Sans-serif modern, geometris, tegas — selaras dengan gaya logo yang solid dan bold (bukan serif/script). Hierarki jelas: heading besar & tebal, body readable.
+- **Elemen ikon "B":** Bentuk ikon "B" pada logo (menyerupai lipatan/anak panah miring) dapat dijadikan elemen grafis berulang (misal bentuk divider, bullet custom, atau aksen di kartu pricing/portofolio) untuk memperkuat brand recall.
+- **Konsistensi:** Karena logo sudah final, semua asset turunan (favicon, OG image, ilustrasi) harus konsisten dengan palet & gaya logo ini.
+
+### 7.1 Layout Dinamis
+
+Layout halaman **tidak boleh dibangun sebagai halaman statis yang di-hardcode section-nya**, melainkan dinamis, dengan requirement:
+
+- **Section dikontrol dari data/config** (misal array JSON/objek konfigurasi), sehingga urutan section (Hero, Tentang, Kelebihan, Layanan, Pricing, Portofolio, Kontak) bisa diubah, ditambah, disembunyikan, atau dinonaktifkan sementara (misal saat section POS belum siap tampil) tanpa perlu mengubah struktur komponen inti
+- **Warna & tema terpusat sebagai design token** (CSS variables/theme config) yang mengikuti palet logo di atas — bukan warna yang ditulis manual berulang di tiap komponen — sehingga jika ada penyesuaian brand di kemudian hari, cukup diubah di satu tempat
+- **Konten dinamis:** teks, harga, dan item portofolio diambil dari satu sumber data terpusat (file config/JSON di fase awal, bisa upgrade ke headless CMS di fase berikutnya — lihat roadmap v2), bukan ditulis langsung di JSX/HTML setiap section
+- **Komponen reusable:** kartu pricing, kartu portofolio, dan kartu kelebihan dibuat sebagai komponen generik yang menerima data sebagai props, sehingga menambah/mengurangi item cukup mengubah data, bukan menulis komponen baru
+- **Tujuan:** mempermudah Abdul mengubah konten & tampilan (harga, portofolio baru, status POS) tanpa perlu bongkar kode struktural setiap kali ada update
+
+---
+
+## 8. Metrik Keberhasilan (Success Metrics)
+
+| Metrik | Target Awal |
+|---|---|
+| Conversion rate (visitor → klik CTA WA/form) | >5% |
+| Bounce rate | <50% |
+| Waktu di halaman | >1.5 menit |
+| Jumlah leads Jasa Web/bulan | Ditentukan setelah baseline 1 bulan pertama |
+| Jumlah leads/trial signup POS/bulan | Ditentukan setelah baseline 1 bulan pertama |
+| Rasio leads POS vs Jasa Web | Untuk mengetahui lini mana yang lebih diminati dari website ini |
+
+---
+
+## 9. Roadmap Fase Berikutnya (Out of v1, dicatat untuk referensi)
+
+- **v1.1 (setelah POS resmi live):** Ganti mockup POS dengan screenshot aplikasi asli, tambahkan testimoni/case study pengguna pilot, update pricing dari "estimasi" jadi harga final, ubah CTA dari "Daftar Waitlist" jadi "Berlangganan Sekarang"
+- v1.1: Testimoni klien jasa web, filter portofolio
+- v2: Blog/artikel untuk SEO content marketing
+- v2: CMS admin sederhana untuk update portofolio & pricing tanpa deploy ulang
+- v2: Integrasi form ke CRM/WhatsApp Business API otomatis, sistem onboarding trial POS otomatis
+
+---
+
+## 10. Pertanyaan Terbuka (Perlu Diputuskan Sebelum Development)
+
+1. ~~Apakah "Business To Berkah" berdiri sendiri atau bagian dari payung brand Pujasera Digital/PT Sandang Jaya Berdikari?~~ **Terjawab** — berdiri sendiri, dan membawahi komunitas Pujasera Digital.
+2. ~~Berapa paket pricing & berapa harga masing-masing?~~ **Terjawab** — lihat tabel pricing di bagian 4.5.
+3. Proyek mana saja yang akan ditampilkan sebagai portofolio (perlu izin/anonymize untuk proyek klien seperti Arunika Institute)? — **Dikurasi manual oleh Abdul**, belum ditentukan proyek spesifiknya.
+4. ~~Sudah ada logo/brand guideline, atau perlu dibuat dari nol?~~ **Sudah ada** — logo "Business To Berkah" (gradasi teal-cyan + navy). Perlu file vektor asli (SVG/AI) untuk memastikan hex color yang presisi & agar favicon/OG image bisa diekstrak dengan kualitas tinggi.
+5. ~~Domain yang akan digunakan?~~ **Terjawab** — businesstoberkah.com
+6. ~~Status produk POS: apakah aplikasi POS-nya sudah jadi/berjalan, masih dikembangkan, atau baru rencana?~~ **Terjawab** — masih dalam tahap pengembangan.
+7. Apakah POS ini dibangun sendiri (custom, mis. dengan stack NestJS/Next.js yang biasa dipakai) atau white-label dari vendor lain? — **Belum terjawab**
+8. Apakah sudah ada UMKM yang jadi pengguna awal/pilot POS untuk dijadikan testimoni? — **Belum terjawab**
+9. ~~Apakah dua lini layanan ini akan punya CTA/form terpisah, atau digabung dalam satu form dengan pilihan minat?~~ **Terjawab** — CTA mengarah ke email admin@businesstoberkah.com dan WhatsApp 0895-4118-28671 (belum ditentukan apakah dipisah per lini atau satu kanal untuk semua; asumsi awal: satu kanal WA untuk semua CTA, dengan pesan template yang berbeda per konteks).
+10. ~~Apakah harga langganan POS berlaku flat atau bertingkat?~~ **Terjawab sebagian** — ternyata bertingkat (bukan flat): Rp 49rb (Standar, tanpa AI agent) dan Rp 79rb (Menengah, "harga tengah", fitur lumayan lengkap). Karena disebut "harga tengah", kemungkinan ada tier tertinggi di atas Rp 79rb yang belum disebutkan — **lihat pertanyaan baru #12**.
+11. ~~Detail fitur & batasan tiap paket jasa web~~ **Terjawab** — lihat rincian lengkap 4 paket (LITE, PRO, CORPORATE/ELITE, CUSTOM/ENTERPRISE) di bagian 4.5A.
+12. ~~Nama, harga, dan fitur tier POS tertinggi~~ **Terjawab** — disamakan, tidak ada tier ketiga; struktur final 2 tier (Standar Rp 49rb, Menengah Rp 79rb).
+13. Fitur lengkap tier Menengah POS (Rp 79rb) di luar AI agent, dan apakah opsi tahunan Rp 600rb berlaku untuk tier Standar, Menengah, atau keduanya. — **Masih perlu dilengkapi**
+14. **Baru:** Apakah paket jasa web tetap perlu badge/nama kategori lama (Company Profile Startup, UMKM Grow, Website E-Commerce, High-Tech) di samping nama baru (LITE, PRO, CORPORATE/ELITE, CUSTOM/ENTERPRISE), atau nama lama sepenuhnya digantikan nama baru ini? PRD versi ini mengasumsikan **nama baru menggantikan sepenuhnya**.
+15. **Baru:** Apakah CTA dipisah per lini layanan (WA untuk Jasa Web, email untuk POS, dst) atau satu kanal WhatsApp + email yang sama untuk semua CTA dengan pesan template berbeda? PRD versi ini mengasumsikan **satu kanal sama untuk semua, dibedakan lewat isi pesan**.
+
+---
+
+*Dokumen ini adalah kerangka awal — silakan isi bagian pricing, portofolio spesifik, dan brand guideline sesuai data aktual sebelum masuk tahap development.*
