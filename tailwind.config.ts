@@ -5,36 +5,29 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Stitch "Business To Berkah" — clean cyan agency
+        // PRD brand palette — derived from logo
         brand: {
-          DEFAULT: "#0BA5C8",
-          dark: "#0889A8",
-          soft: "#E6F7FB",
-          muted: "#B8E8F2",
+          DEFAULT: "#13A6E8",     // Cyan Blue — CTA, accents
+          dark: "#0B7FB8",
+          light: "#38BDD8",
+          soft: "#E8F6FE",
+          muted: "#B8E4F5",
+        },
+        teal: {
+          DEFAULT: "#16E0B3",     // Emerald/Teal — gradient start
+          dark: "#0FB890",
+          light: "#5BEDD0",
+          soft: "#E0FBF5",
         },
         ink: {
-          DEFAULT: "#0F172A",
-          muted: "#64748B",
-          light: "#94A3B8",
+          DEFAULT: "#16142E",     // Deep Navy — body text, dark sections
+          muted: "#4A4769",
+          light: "#8B88A3",
         },
         surface: {
           DEFAULT: "#FFFFFF",
-          alt: "#F8FAFC",
-          soft: "#F1F5F9",
-        },
-        // Keep legacy aliases so older classnames don't break mid-migrate
-        indigo: {
-          DEFAULT: "#0F172A",
-          light: "#334155",
-        },
-        parchment: "#FFFFFF",
-        gold: {
-          DEFAULT: "#0BA5C8",
-          light: "#38BDD8",
-        },
-        teal: {
-          DEFAULT: "#0BA5C8",
-          light: "#38BDD8",
+          alt: "#F8F9FC",
+          soft: "#F1F2F8",
         },
       },
       fontFamily: {
@@ -43,11 +36,37 @@ const config: Config = {
         mono: ["var(--font-plex-mono)", "monospace"],
       },
       boxShadow: {
-        card: "0 10px 40px -12px rgba(15, 23, 42, 0.08)",
-        soft: "0 4px 24px -4px rgba(15, 23, 42, 0.06)",
+        card: "0 20px 60px -15px rgba(22, 20, 46, 0.12)",
+        soft: "0 4px 24px -4px rgba(22, 20, 46, 0.06)",
+        glow: "0 0 40px -8px rgba(19, 166, 232, 0.35)",
+        "glow-teal": "0 0 40px -8px rgba(22, 224, 179, 0.35)",
       },
       borderRadius: {
         "4xl": "2rem",
+      },
+      backgroundImage: {
+        'gradient-brand': 'linear-gradient(135deg, #16E0B3 0%, #13A6E8 100%)',
+        'gradient-brand-soft': 'linear-gradient(135deg, rgba(22,224,179,0.08) 0%, rgba(19,166,232,0.08) 100%)',
+        'gradient-navy': 'linear-gradient(135deg, #16142E 0%, #1E1B3A 100%)',
+      },
+      keyframes: {
+        'fade-up': {
+          from: { opacity: '0', transform: 'translateY(20px)' },
+          to: { opacity: '1', transform: 'translateY(0)' },
+        },
+        'float': {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-8px)' },
+        },
+        'shine': {
+          '0%': { backgroundPosition: '200% center' },
+          '100%': { backgroundPosition: '-200% center' },
+        },
+      },
+      animation: {
+        'fade-up': 'fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both',
+        'float': 'float 6s ease-in-out infinite',
+        'shine': 'shine 3s linear infinite',
       },
     },
   },
