@@ -19,16 +19,6 @@ export const advantages = [
     desc: "Setiap paket sudah termasuk kuota revisi. Anda bisa request perubahan tanpa biaya ekstra.",
     icon: "refresh" as const,
   },
-  {
-    title: "Support Pasca-Launch",
-    desc: "Pendampingan setelah website live. Kami tetap siap bantu jika ada kendala teknis.",
-    icon: "support" as const,
-  },
-  {
-    title: "Teknologi Modern",
-    desc: "Dibangun dengan stack terkini — cepat, SEO-friendly, dan siap berkembang bersama bisnis Anda.",
-    icon: "rocket" as const,
-  },
 ];
 
 export const services = [
@@ -43,6 +33,7 @@ export const services = [
     ],
     icon: "code",
     badge: null,
+    image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=900&q=80",
   },
   {
     title: "Layanan POS Berlangganan",
@@ -56,6 +47,7 @@ export const services = [
     ],
     icon: "pos",
     badge: "Segera Hadir",
+    image: "https://images.unsplash.com/photo-1556740738-ab6f43cc9b55?auto=format&fit=crop&w=900&q=80",
   },
 ];
 
@@ -172,6 +164,16 @@ export const portfolio = [
     category: "Sistem Custom",
     image: "https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&w=800&q=80",
   },
+  {
+    name: "Booking Online",
+    category: "Web App",
+    image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    name: "Restoran Citra",
+    category: "Landing Page",
+    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80",
+  },
 ];
 
 export const faqs = [
@@ -220,3 +222,43 @@ export const contact = {
   email: "admin@businesstoberkah.com",
   instagram: "@businesstoberkah",
 };
+
+export const renewalPlans = [
+  {
+    id: "lite",
+    name: "LITE",
+    price: 350000,
+    duration: "1 Tahun",
+    domain: ".my.id / .biz.id",
+    hosting: "500MB - 1GB",
+    support: "Email support",
+    popular: false,
+  },
+  {
+    id: "pro",
+    name: "PRO",
+    price: 750000,
+    duration: "1 Tahun",
+    domain: ".com / .id",
+    hosting: "2 - 5GB",
+    support: "WhatsApp + Email support",
+    popular: true,
+  },
+  {
+    id: "corporate",
+    name: "CORPORATE",
+    price: 1500000,
+    duration: "1 Tahun",
+    domain: ".com / .co.id",
+    hosting: "Cloud Hosting / VPS",
+    support: "Prioritas WhatsApp + Email",
+    popular: false,
+  },
+];
+
+export const paymentMethods = [
+  { id: "qris", name: "QRIS", desc: "Scan & bayar via e-wallet apa saja", icon: "qris" },
+  { id: "bca", name: "Bank BCA", desc: "Transfer manual via ATM/mobile banking", icon: "bank" },
+  { id: "mandiri", name: "Bank Mandiri", desc: "Transfer manual via ATM/mobile banking", icon: "bank" },
+  { id: "gopay", name: "GoPay / OVO", desc: "Transfer via e-wallet", icon: "wallet" },
+];

@@ -1,13 +1,14 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const links = [
-  { href: "#tentang", label: "Tentang" },
-  { href: "#layanan", label: "Layanan" },
-  { href: "#harga", label: "Pricing" },
-  { href: "#portofolio", label: "Portofolio" },
-  { href: "#faq", label: "FAQ" },
+  { href: "/#tentang", label: "Tentang" },
+  { href: "/#layanan", label: "Layanan" },
+  { href: "/#harga", label: "Pricing" },
+  { href: "/#portofolio", label: "Portofolio" },
+  { href: "/#faq", label: "FAQ" },
 ];
 
 export default function Header() {
@@ -32,12 +33,13 @@ export default function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2">
-          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-brand text-lg font-extrabold text-white shadow-glow">
-            B
-          </span>
-          <span className="text-lg font-extrabold tracking-tight text-ink">
-            Business<span className="text-gradient"> To Berkah</span>
-          </span>
+          <Image
+            src={"/logo.png"}
+            alt="logo"
+            width={100}
+            height={120}
+            loading="lazy"
+          />
         </a>
 
         {/* Desktop nav */}
@@ -69,9 +71,15 @@ export default function Header() {
           aria-label="Menu"
         >
           <div className="flex flex-col gap-1.5">
-            <span className={`h-0.5 w-5 bg-ink transition-all ${menuOpen ? "translate-y-2 rotate-45" : ""}`} />
-            <span className={`h-0.5 w-5 bg-ink transition-all ${menuOpen ? "opacity-0" : ""}`} />
-            <span className={`h-0.5 w-5 bg-ink transition-all ${menuOpen ? "-translate-y-2 -rotate-45" : ""}`} />
+            <span
+              className={`h-0.5 w-5 bg-ink transition-all ${menuOpen ? "translate-y-2 rotate-45" : ""}`}
+            />
+            <span
+              className={`h-0.5 w-5 bg-ink transition-all ${menuOpen ? "opacity-0" : ""}`}
+            />
+            <span
+              className={`h-0.5 w-5 bg-ink transition-all ${menuOpen ? "-translate-y-2 -rotate-45" : ""}`}
+            />
           </div>
         </button>
       </div>

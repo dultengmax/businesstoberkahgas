@@ -1,4 +1,5 @@
 import { contact } from "@/lib/content";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 const navLinks = [
   { href: "#tentang", label: "Tentang" },
@@ -113,7 +114,12 @@ export default function Footer() {
 
       <div className="mx-auto mt-12 max-w-6xl border-t border-slate-200 px-6 pt-6 text-center text-xs text-ink-light">
         © {new Date().getFullYear()} Business To Berkah. Semua hak cipta dilindungi.
+        <span className="mx-2">·</span>
+        <a href="/perpanjangan" className="font-medium text-brand transition hover:underline">
+          Perpanjang Website
+        </a>
       </div>
+      <FloatingWhatsApp />
     </footer>
   );
 }
